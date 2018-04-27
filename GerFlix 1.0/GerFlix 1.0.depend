@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1524581192 source:c:\test\scarafilo\gerflix 1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Serie.h"
+	"Usuario.h"
+
+1524580030 c:\test\scarafilo\gerflix 1.0\serie.h
+
+1524581192 c:\test\scarafilo\gerflix 1.0\usuario.h
+
+1524580113 source:c:\test\scarafilo\gerflix 1.0\serie.c
+	"Serie.h"
+	<string.h>
+
+1524580030 source:c:\test\scarafilo\gerflix 1.0\usuario.c
+	"Usuario.h"
+
+1524865237 source:c:\test\sboutet\gerflix-master\gerflix 1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"UsuariosySeries.h"
+
+1524604782 c:\test\sboutet\gerflix-master\gerflix 1.0\serie.h
+
+1524859331 c:\test\sboutet\gerflix-master\gerflix 1.0\usuario.h
+
+1524862863 source:c:\test\sboutet\gerflix-master\gerflix 1.0\usuario.c
+	<string.h>
+	<stdio.h>
+	"Usuario.h"
+
+1524866099 source:c:\test\sboutet\gerflix-master\gerflix 1.0\serie.c
+	<stdio.h>
+	<string.h>
+	"Serie.h"
+
+1524865212 c:\test\sboutet\gerflix-master\gerflix 1.0\usuariosyseries.h
+	"Serie.h"
+	"Usuario.h"
+
+1524865190 source:c:\test\sboutet\gerflix-master\gerflix 1.0\usuariosyseries.c
+	<string.h>
+	<stdio.h>
+	"UsuariosySeries.h"
+
