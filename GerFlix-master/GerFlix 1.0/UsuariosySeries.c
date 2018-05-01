@@ -1,21 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 #include "UsuariosySeries.h"
-void inicializarUsuarioySeries(usuarioSerie codUsuarioySerie[],eUsuario usuario[],eSerie serie[])
-{
-   int i[50]={1000,1001,1002,1003,1004, 1005,1006,1007,1008,1009, 1010,1011,1012,1013,1014,1000,1001,1002,1003,1004, 1005,1006,1007,1008,1009, 1010,1011,1012,1013,1014};
-   int j[50]={100,100,101,101,102,100,100,103,101,102,103,104,104,100,103,102,105,101,102,100,100,103,101,102,103,104,104,100,103};
-   int z;
-
-
-    for(z=0; z<30; z++)
-    {
-    codUsuarioySerie[z].idUsuario=i[z];
-    codUsuarioySerie[z].idSerie=j[z];
-    }
-
-}
-
+#define OCUPADO 0
+#define LIBRE 1
 void mostrarUsuarioConSerie(eUsuario usuarios[], eSerie series[],int cantUsuarios, int cantSeries, usuarioSerie lista[] )
 {
      {
@@ -127,4 +114,22 @@ void mostrarUsuariosSerie(eSerie serie[],eUsuario usuario[],usuarioSerie codUsua
     }
 
 
+}
+int eUsuarioySerie_buscarLugarLibre(usuarioSerie listado[],int limite)
+{
+    int retorno = -1;
+    int i;
+    if(limite > 0 && listado != NULL)
+    {
+        retorno = -2;
+        for(i=0;i<limite;i++)
+        {
+            if(listado[i].estado == LIBRE)
+            {
+                retorno = i;
+                break;
+            }
+        }
+    }
+    return retorno;
 }

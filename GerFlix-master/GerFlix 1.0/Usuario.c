@@ -1,7 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 #include "Usuario.h"
-
+#define OCUPADO 0
+#define LIBRE 1
 void inicializarUsuariosEstado(eUsuario usuarios[], int cant)
 {
      int i;
@@ -51,4 +52,73 @@ void mostrarListaUsuarios(eUsuario usuarios[], int cant)
 
 
 }
+}
+void eUsuario_alta(eUsuario  listado[],int limite)
+{
+    char nombre[50];
+    int id;
+    int indice;
+
+    if(limite > 0 && listado != NULL)
+    {
+        indice = eUsuario_buscarLugarLibre(listado,limite);
+        if(indice >= 0)
+        {
+                id = eUsuario_siguienteId(listado,limite);
+                printf("Ingrese el nombre del usuario que desea dar de alta");
+                gets(nombre);
+            //if(!getValidString("Nombre?","Error","Overflow", nombre,50,2))
+            //{
+
+                strcpy(listado[indice].nombre,nombre);
+                listado[indice].idUsuario = id;
+                listado[indice].estado = OCUPADO;
+
+
+
+
+
+        }
+    }
+}
+
+int eUsuario_buscarLugarLibre(eUsuario listado[],int limite)
+{
+    int retorno = -1;
+    int i;
+    if(limite > 0 && listado != NULL)
+    {
+        retorno = -2;
+        for(i=0;i<limite;i++)
+        {
+            if(listado[i].estado == LIBRE)
+            {
+                retorno = i;
+                break;
+            }
+        }
+    }
+    return retorno;
+}
+
+int eUsuario_siguienteId(eUsuario listado[],int limite)
+{
+    int retorno = 0;
+    int i;
+    if(limite > 0 && listado != NULL)
+    {
+        for(i=0; i<limite; i++)
+        {
+            if(listado[i].estado == OCUPADO)
+            {
+                    if(listado[i].idUsuario>retorno)
+                    {
+                         retorno=listado[i].idUsuario;
+                    }
+
+            }
+        }
+    }
+
+    return retorno+1000;
 }

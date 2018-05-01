@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "Serie.h"
-
+#define OCUPADO 0
+#define LIBRE 1
 /*
     int idSerie;
     char nombre[50];

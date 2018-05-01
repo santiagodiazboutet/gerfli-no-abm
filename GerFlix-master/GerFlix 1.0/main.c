@@ -21,12 +21,11 @@ int main()
         scanf("%d", &opcion);
         switch(opcion){
         case 1:
-    inicializarSeriesEstado(listaDeSeries, TAMSERIE);
-    inicializarSeriesHardCode(listaDeSeries);
-    inicializarUsuariosEstado(listaDeUsuarios,TAMUSUARIO);
-    inicializarUsuariosHardCode(listaDeUsuarios);
-    inicializarUsuarioySeries(listaUsuarioSerie,listaDeUsuarios,listaDeSeries);
-
+    /*inicializarSeriesEstado(listaDeSeries, TAMSERIE);
+   */ inicializarSeriesHardCode(listaDeSeries);
+   eUsuario_alta(listaDeUsuarios,TAMUSUARIOSERIE);
+    //inicializarUsuariosEstado(listaDeUsuarios,TAMUSUARIO);
+    //inicializarUsuariosHardCode(listaDeUsuarios);
         break;
         case 4:
             mostrarSerieConUsuario(listaDeUsuarios, listaDeSeries, TAMUSUARIO, TAMSERIE,listaUsuarioSerie);

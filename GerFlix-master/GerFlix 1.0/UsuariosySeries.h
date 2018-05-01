@@ -3,6 +3,7 @@
 typedef struct{
 int idUsuario;
 int idSerie;
+int estado;
 }usuarioSerie;
 void inicializarUsuarioySeries(usuarioSerie [],eUsuario[],eSerie[]);
 void mostrarUsuarioConSerie(eUsuario [], eSerie[], int, int, usuarioSerie []);
